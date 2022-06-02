@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication6.HelloController2">
+   <children>
+      <ImageView fitHeight="409.0" fitWidth="607.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/pexels-gdtography-911738.jpg" />
+         </image>
+      </ImageView>
+      <VBox layoutX="34.0" layoutY="50.0" prefHeight="186.0" prefWidth="121.0" spacing="10.0">
+         <children>
+            <Label prefHeight="41.0" prefWidth="47.0" text="ID">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label text="Name">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label text="Email">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label text="Address">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label text="Telephone">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <effect>
+
+         </effect>
+      </VBox>
+      <AnchorPane layoutX="138.0" layoutY="48.0" prefHeight="221.0" prefWidth="217.0">
+         <children>
+            <TextField fx:id="name" layoutX="26.0" layoutY="39.0" prefHeight="32.0" prefWidth="151.0" promptText="Enter your name" />
+            <TextField fx:id="email" layoutX="26.0" layoutY="78.0" prefHeight="32.0" prefWidth="151.0" promptText="Enter Email" />
+            <TextField fx:id="address" layoutX="26.0" layoutY="123.0" prefHeight="32.0" prefWidth="151.0" promptText="Your address" />
+            <TextField fx:id="phone" layoutX="26.0" layoutY="164.0" prefHeight="32.0" prefWidth="151.0" promptText="Enter your phone" />
+            <TextField fx:id="id" layoutX="26.0" layoutY="-2.0" prefHeight="32.0" prefWidth="151.0" promptText="Enter ID" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="34.0" layoutY="236.0" prefHeight="95.0" prefWidth="200.0" />
+      <AnchorPane layoutX="354.0" layoutY="38.0" prefHeight="251.0" prefWidth="257.0">
+         <children>
+            <Button layoutX="162.0" layoutY="69.0" mnemonicParsing="false" onAction="#onSearchClick" prefHeight="32.0" prefWidth="72.0" style="-fx-background-color: black;" text="Search" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="update" layoutX="162.0" layoutY="24.0" mnemonicParsing="false" onAction="#onUpdateClick" style="-fx-background-color: black;" text="Update" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="162.0" layoutY="-15.0" mnemonicParsing="false" onAction="#onDeletClick" prefHeight="32.0" prefWidth="72.0" style="-fx-background-color: black;" text="Delete" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="addEmp" layoutX="162.0" layoutY="110.0" mnemonicParsing="false" onAction="#onButtonClick" prefHeight="31.0" prefWidth="72.0" style="-fx-background-color: black;" text="Add" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="162.0" layoutY="150.0" mnemonicParsing="false" onAction="#onResetClick" prefHeight="32.0" prefWidth="72.0" style="-fx-background-color: black;" text="Reset" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Label layoutX="-27.0" layoutY="9.0" prefHeight="31.0" prefWidth="179.0" text="Employee Id">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <TextField fx:id="searchId" layoutX="-27.0" layoutY="40.0" prefHeight="32.0" prefWidth="151.0" promptText="Enter employee id" />
+            <TextField fx:id="jop" layoutX="-24.0" layoutY="118.0" prefHeight="32.0" prefWidth="149.0" promptText="Enter Jop" />
+            <Label layoutX="-24.0" layoutY="85.0" text="Jop">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="table" layoutX="85.0" layoutY="254.0" onMouseClicked="#getSelctedRow" prefHeight="145.0" prefWidth="514.0" style="-fx-background-color: white;">
+         <columns>
+            <TableColumn fx:id="idCol" prefWidth="60.66661834716797" text="ID" />
+            <TableColumn fx:id="nameCol" prefWidth="105.99993896484375" text="Name" />
+            <TableColumn fx:id="emailCol" prefWidth="100.00007629394531" text="Email" />
+            <TableColumn fx:id="addressCol" prefWidth="94.0" text="Address" />
+            <TableColumn fx:id="phoneCol" prefWidth="85.33328247070312" text="Telephone" />
+            <TableColumn fx:id="jopCol" minWidth="0.0" prefWidth="59.33331298828125" text="Jop" />
+         </columns>
+      </TableView>
+      <AnchorPane layoutX="-70.0" layoutY="301.0" prefHeight="125.0" prefWidth="208.0">
+         <children>
+            <Label layoutX="73.0" layoutY="-5.0" prefHeight="38.0" prefWidth="79.0" text="Result">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
